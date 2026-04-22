@@ -75,7 +75,7 @@ export default function Home() {
                 <button
                   onClick = {() => enterBath(user,"湯船")}
                   disabled = {currentBath !== null && currentBath !== user}
-                >
+                  className = 'px-3 py-1 bg-blue-500 text-white rounded hover:bg-green-600 disabled:bg-gray-600'>
                   湯船
                 </button>
               </div>
