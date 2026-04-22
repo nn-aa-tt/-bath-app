@@ -60,7 +60,7 @@ export default function Home() {
         </div>
         {/*操作*/}
         <div className = "space-y-4">
-          <h3 className = "font-medium text-gray-500">入浴</h3>
+          <h3 className = "font-medium text-gray-700">入浴</h3>
 
           {housemembers.map((user) => (
             <div key={user}>
@@ -68,7 +68,8 @@ export default function Home() {
               <div className = "flex space-x-2">
                 <button
                   onClick={() => enterBath(user,"シャワー")}
-                  disabled = {currentBath !== null && currentBath !== user}>
+                  disabled = {currentBath !== null && currentBath !== user}
+                  className = 'px-3 py-1 bg-blue-500 text-white rounded hover:bg-green-600 disabled:bg-gray-600'>
                   シャワー
                 </button>
                 <button
