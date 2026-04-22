@@ -60,7 +60,7 @@ export default function Home() {
         </div>
         {/*操作*/}
         <div className = "space-y-4">
-          <h3 className = "font-medium text-gray-700">入浴</h3>
+          <h3 className = "font-medium text-gray-100">入浴</h3>
 
           {housemembers.map((user) => (
             <div key={user}>
