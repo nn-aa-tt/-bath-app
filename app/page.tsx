@@ -38,14 +38,14 @@ export default function Home() {
     setCurrentBath(name);
     setBathType(type);
 
-    await supabase.from("bath_status").update({ current_bath:name,bathtype:type}).eq("id",1);
+    await supabase.from("bath_status").update({ current_bath:name,bath_type:type}).eq("id",1);
   };
 
   const leaveBath = async () => {
     setCurrentBath(null);
     setBathType(null);
 
-    await supabase.from("bath_status").update({current_bath:null,bathtype:null}).eq("id",1);
+    await supabase.from("bath_status").update({current_bath:null,bath_type:null}).eq("id",1);
   };
 
   return (
