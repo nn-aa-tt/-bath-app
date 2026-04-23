@@ -24,7 +24,7 @@ export default function Home() {
     fetchStatus();
     const channel = supabase.channel("realtime-bath").on("postgres_changes",{event:"UPDATE",schema:"public",table:"bath_status"},(payload)=>{
       setCurrentBath(payload.new.current_bath);
-      setBathType(payload.new.bathtype)
+      setBathType(payload.new.bath_type)
     })
     .subscribe();
 
